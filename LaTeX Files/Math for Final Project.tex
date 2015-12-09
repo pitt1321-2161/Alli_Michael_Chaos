@@ -20,13 +20,9 @@
 \mathscr{L} = \mathscr{L}(q_{1}, \ldots, q_{n}, \dot{q_{1}}, \ldots, \dot{q_{n}}, t) = T - U \\
 \end{gather*}
 
-where:
-
 \begin{gather*}
 \frac{\partial \mathscr{L}}{\partial q_{i}} = \frac{d}{dt}\frac{\partial \mathscr{L}}{\partial \dot{q_{ix}}}
 \end{gather*}
-
-furthermore:
 
 \begin{gather*}
 p_{i} = \frac{\partial \mathscr{L}}{\partial \dot{q_{i}}}
@@ -38,19 +34,13 @@ p_{i} = \frac{\partial \mathscr{L}}{\partial \dot{q_{i}}}
 \mathscr{H} = \sum_{i = 1}^{n}p_{i}\dot{q_{i}} - \mathscr{L}
 \end{gather*}
 
-Noting that we want to keep:
-
 \begin{gather*}
 \mathscr{H} = \mathscr{H}(q_{1}, \ldots, q_{n}, p_{1}, \ldots, p_{n})
 \end{gather*}
 
-In our case, as in many cases, we can say that:
-
 \begin{gather*}
 \mathscr{H} = T + U
 \end{gather*}
-
-where the Hamiltonian equations are:
 
 \begin{gather*}
 \dot{q}_{i} = \frac{\partial \mathscr{H}}{\partial p_{i}} \qquad\text{and}\qquad \dot{p_{i}} = - \frac{\partial \mathscr{H}}{\partial q_{i}}
@@ -58,22 +48,16 @@ where the Hamiltonian equations are:
 
 \section*{Swinging Atwood Machine}
 
-For our system:
-
 \begin{align*}
 T &= \frac{1}{2}m_{1}v_{1}^{2}+\frac{1}{2}m_{1}v_{2}^{2} \\
 &= \frac{1}{2}m_{1}\left( \dot{r_{1}}^{2} + (r_{1}\dot{\theta_{1}})^{2} \right) \,+\, \frac{1}{2}m_{2}\left( \dot{r_{2}}^{2} + (r_{2}\dot{\theta_{2}})^{2} \right) \\
 U &= m_{1} \, g \, \left[ r_{1} \, (1-\cos{\theta_{1}}) + (R - r_{1}) \right] \,+\, m_{2} \, g \, \left[ r_{2} \, (1-\cos{\theta_{2}}) + (R - r_{2})\right]
 \end{align*}
 
-However, for our system, 
-
 \begin{align*}
 r_{2} = R - r_{1} \qquad&\text{and}\qquad \dot{r_{2}} = -\dot{r_{1}} \\
 \dot{\theta_{2}} = 0 \qquad&\text{and}\qquad \theta_{2} = 0
 \end{align*}
-
-where $R$ is the combined length of the two string lengths.  Therefore, we say that
 
 \begin{gather*}
 \mathscr{H} = \frac{1}{2}m_{1}\left( \dot{r_{1}}^{2} + (r_{1}\dot{\theta_{1}})^{2} \right) \,+\, \frac{1}{2}m_{2}\dot{r}_{1}^{2} \,-\, m_{1}\,g\,r_{1}\,\cos{\theta_{1}} \,+\, m_{2}\,g\,r_{1} \\
@@ -81,23 +65,19 @@ where $R$ is the combined length of the two string lengths.  Therefore, we say t
 \mathscr{H} = \frac{1}{2}m_{1}\left( \dot{r}^{2} + (r\,\dot{\theta})^{2} \right) \,+\, \frac{1}{2}m_{2}\,\dot{r}^{2} \,-\, m_{1}\,g\,r\,\cos{\theta} \,+\, m_{2}\,g\,r
 \end{gather*}
 
-Now we return to our requirement that $\mathscr{H}$ be in terms of $(q_{1}, \ldots, q_{n}, p_{1}, \ldots, p_{n})$.  To resolve this issue, we note that:
-
 \begin{align*}
 p_{r} = \frac{\partial \mathscr{L}}{\partial \dot{r}} &= \frac{\partial T}{\partial \dot{r}} \\
 &= \frac{\partial}{\partial \dot{r}} \left( \frac{1}{2}m_{1}\left( \dot{r}^{2} + (r\,\dot{\theta})^{2} \right) \,+\, \frac{1}{2}m_{2}\,\dot{r}^{2} \right) \\
 &= \dot{r}(m_{1} +m_{2}) \implies \\
 \dot{r} &= \frac{p_{r}}{(m_{1}+m_{2})} \\
 \\
-&\text{and that:} \\
+&\text{and:} \\
 \\
 p_{\theta} = \frac{\partial \mathscr{L}}{\partial \dot{\theta}} &= \frac{\partial T}{\partial \dot{\theta}} \\
 &= \frac{\partial}{\partial \dot{\theta}}\left( \frac{1}{2}m_{1}\left( \dot{r}^{2} + (r\,\dot{\theta})^{2} \right) \,+\, \frac{1}{2}m_{2}\,\dot{r}^{2} \right) \\
 &= m_{1} \, r^{2} \, \dot{\theta} \implies \\
 \dot{\theta} &= \frac{p_{\theta}}{m_{1}\,r^{2}}
 \end{align*}
-
-We can thereby rewrite the Hamiltonian of the system as:
 
 \begin{gather*}
 \mathscr{H} = \frac{1}{2}m_{1}\left[ \left(\frac{p_{r}}{(m_{1}+m_{2})}\right)^{2} + \left(r\,\left(\frac{p_{\theta}}{m_{1}\,r^{2}}\right)\right)^{2} \right] \,+\, \frac{1}{2}m_{2}\,\left(\frac{p_{r}}{(m_{1}+m_{2})}\right)^{2} \,-\, m_{1}\,g\,r\,\cos{\theta} \,+\, m_{2}\,g\,r \\
@@ -107,17 +87,9 @@ We can thereby rewrite the Hamiltonian of the system as:
 \mathscr{H} = \frac{p_{r}^{2}}{2(m_{1}+m_{2})} \,+\, \frac{p_{\theta}^{2}}{2\,m_{1}\,r^{2}} \,+\, m_{2}\,g\,r \,-\, m_{1}\,g\,r\,\cos{\theta}
 \end{gather*}
 
-Using our Hamiltonian equations, we obtain:
-
 \begin{align*}
 \dot{\theta} = \frac{\partial \mathscr{H}}{\partial p_{\theta}} = \frac{p_{\theta}}{m_{1}\,r^{2}} \qquad&\qquad\qquad \dot{p_{\theta}} = -\frac{\partial \mathscr{H}}{\partial \theta} = -m_{1}\,g\,r\,\sin{\theta} \\
 \dot{r} = \frac{\partial \mathscr{H}}{\partial p_{r}} = \frac{p_{r}}{(m_{1}+m_{2})} \qquad&\qquad\qquad \dot{p_{r}} = -\frac{\partial \mathscr{H}}{\partial r} = \frac{p_{\theta}^{2}}{m_{1}\,r^{3}} \,-\, m_{2}\,g \,+\, m_{1}\,g\,\cos{\theta} \\
 \end{align*}
-
-Which are the differential equations we will be solving.
-
-\section*{Phase Space}
-
-Once we (numerically) solve our set of four differential equations for $r(t),\, \theta(t),\, p_{r}(t),\,\& \,\, p_{\theta}(t)$, we have what could be called a four-dimensional phase space.  However, since energy in our system is conserved (we are examining the case where the pulley is massless and frictionless), we can express any of the variables in terms of the other three.  Therefore, a plot containing information about three of these values is sufficient for describing the state of the system.
 
 \end{document}
