@@ -154,13 +154,13 @@ To achieve this analysis, we first identified points where the radius reached lo
 \label{bifurcation}
 \end{figure}
 
-From Fig. \ref{bifurcation}, we can clearly see mass ratios where the possible differences in orbits are more varied than for other ratios.  The most notable examples of regions we could predict to be chaotic are between around 8 and 15, and past 24.  On the other hand, we can see areas of very similar orbits at locations such as 7.5 and 22.5.  In Fig. \ref{check} we check the behavior of the system for mass ratios where the larger mass is 12 and 22.5 times larger than the smaller mass, and we can certainly see that the former is far more chaotic than the latter.
+From Fig. \ref{bifurcation}, we can clearly see mass ratios where the possible differences in orbits are more varied than for other ratios.  The most notable examples of regions we could predict to be chaotic are between around 8 and 15, and past 24.  On the other hand, we can see areas of very similar orbits at locations such as 7.5 and 22.5.  In Fig. \ref{trajectories} we check the behavior of the system for mass ratios where the larger mass is 12 and 22.5 times larger than the smaller mass, and we can certainly see that the former is far more chaotic than the latter.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{two_spots}
 \caption{Two examples of trajectories.  The plot on the left is for a mass ratio of 12, and the plot on the right is for a mass ratio of 22.5.  These values were selected by using the bifurcation diagram to predict ratios that would be chaotic and non-chaotic.}
-\label{bifurcation}
+\label{trajectories}
 \end{figure}
 
 It should be noted that the system is not simply chaotic after $M/m > 24$, but continues to exit and re\"enter chaos for as long as we could see.
@@ -171,6 +171,30 @@ Once we (numerically) solve our set of four differential equations for $r(t),\, 
 
 The idea of a Poincar\'e is ultimately to reduce the dimensionality of the phase space so it is possible to examine.  This is accomplished by examining two of the variables at points where the third variable is equal to a constant value.  For our data, we examined $p_r$ vs $r$, for locations where $\theta = 0$.  See Fig. \ref{nine_plots} for some examples of the Poincar\'e maps we achieved in our simulation.  
 
+We note that these are different in appearance from some of the published maps, but ultimately we determined that since the sets of initial conditions were essentially infinite, and we were unable to find the precise conditions used in published works, that our differences rose from differing sets of initial conditions.
+
+\section*{Lyapunov Exponents}Lyapunov Exponents are the exponents used to classify how chaotic a system is.  These exponents specifically characterize the rate of separation of infinitesimally close trajectories in a dynamical system.  It was desired to find these exponents in order to confirm the behavior of our bifurcation diagram. The equation for the change in a trajectory over time is given by:
+
+\begin{gather*}
+|\delta Z(t)| \approx e^{{\lambda t}}|\delta Z_{0}|
+\end{gather*}
+
+where  $\lambda$ is the Lyapunov Exponent. This exponent gives an idea of the predictability of a system by giving the rate of separation of the trajectories. The maximum Lyapunov exponent for a system characterizes its overall behavior. If it is between 0 and 1, not including 0, it is considered chaotic and the greater it is, the more chaotic the system. The max Lyapunov exponent was found for our system using the equation:
+
+\begin{gather*}
+\lambda_{t} \approx \frac{1}{t}\ln{\frac{\delta Z_{t}}{\delta Z_{0}}}
+\end{gather*}
+
+to find the exponents for each time and finding the maximum of all these to find the max exponent for a specific mass.  This was done using the function  This exponent for each mass is plotted below using the function \texttt{lyapunovExponents}.  It is seen that the exponent is always positive, confirming the chaotic behavior of the machine. This plot has the same scale as our bifurcation diagram, so it can easily be compared. When done so, it is seen that as more chaos is shown on the bifurcation diagram, the exponent increases, suggesting that our bifurcation accurately portrays the system's chaos. 
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Lyapunov_2_30}
+\includegraphics[width=\textwidth]{Lyapunov_31_100}
+\caption{Here we show two excerpts of plotting the Lyapunov Exponent.  The upper plot shows the Lyapunov Exponent for $M \in \{1:30\}$, while the lower plot shows $M \in \{31:100\}$}
+\label{lyapunovs}
+\end{figure} 
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{nine_plots}
@@ -178,12 +202,22 @@ The idea of a Poincar\'e is ultimately to reduce the dimensionality of the phase
 \label{nine_plots}
 \end{figure}
 
-We note that these are different in appearance from some of the published maps, but ultimately we determined that since the sets of initial conditions were essentially infinite, and we were unable to find the precise conditions used in published works, that our differences rose from differing sets of initial conditions.
-
 \section*{Conclusion}
 
 Overall, we were satisfied with the information we could learn about the swinging Atwood's machine with the use of Python.  Whereas solving differential equations is useful way to find an analytic solution when possible, our numerical simulations provided more insight by exploring situations in which analytic solutions are not an option.  
 
-Some topics we remain curious about are the Lyapunov exponent, which is another characterization of a chaotic system, as well as an exploration of the system when it is not a closed system, for example when drag from the air, mass of the string, and friction of the string on the pulley are introduced.
+One topic we remain curious about is an exploration of the system when it is not a closed system, for example when drag from the air, mass of the string, and friction of the string on the pulley are introduced.  This would afford us a more accurate portrayal of reality, but will require much more math.  We would also be interested in exploring how the concept of fractal dimensions plays a role in characterizing our phase plots.
+
+\begin{thebibliography}{9}
+\bibitem{first} 
+Antonio Politi (2013) \texttt{http://www.scholarpedia.org/article Lyapunov\_exponent}
+ 
+\bibitem{second} 
+N. Tufillaro. Motions of a swinging Atwood's machine. \textit{Journal de Physique}, 1985, 46 (9),	pp.1495-1500. 10.1051/jphys:019850046090149500. jpa-00210094
+ 
+\bibitem{third} 
+Swinging Atwood's machine. (2014, June 15). In Wikipedia, The Free Encyclopedia. Retrieved 05:43, 	December 2, 2015, from \texttt{https://en.wikipedia.org/w/index.php?title=Swinging\_Atwood}
+
+\end{thebibliography}
 
 \end{document}

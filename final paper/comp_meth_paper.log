@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 DEC 2015 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 DEC 2015 22:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -161,11 +161,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen122
 \Gm@dimlist=\toks20
 )
-(./comp_meth_paper.aux
-
-LaTeX Warning: Label `bifurcation' multiply defined.
-
-)
+(./comp_meth_paper.aux)
 \openout1 = `comp_meth_paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -320,9 +316,6 @@ Package pdftex.def Info: bifurcation.jpg used on input line 152.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `check' on page 4 undefined on input line 157.
-
 <two_spots.jpg, id=27, 6022.5pt x 3011.25pt>
 File: two_spots.jpg Graphic file (type jpg)
  <use two_spots.jpg>
@@ -338,44 +331,63 @@ OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 &  \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML
 /cmm/m/it/10 t\OT1/cmr/m/n/10 )$,
  []
 
-<nine_plots.jpg, id=28, 4890.27pt x 4833.05624pt>
+[4] [5 <./topper.png> <./bottom.png> <./us.png>]
+<Lyapunov_2_30.jpg, id=37, 9033.75pt x 2107.875pt>
+File: Lyapunov_2_30.jpg Graphic file (type jpg)
+ <use Lyapunov_2_30.jpg>
+Package pdftex.def Info: Lyapunov_2_30.jpg used on input line 194.
+(pdftex.def)             Requested size: 386.67296pt x 90.21872pt.
+
+<Lyapunov_31_100.jpg, id=38, 9033.75pt x 2107.875pt>
+File: Lyapunov_31_100.jpg Graphic file (type jpg)
+ <use Lyapunov_31_100.jpg>
+Package pdftex.def Info: Lyapunov_31_100.jpg used on input line 195.
+(pdftex.def)             Requested size: 386.67296pt x 90.21872pt.
+
+<nine_plots.jpg, id=39, 4890.27pt x 4833.05624pt>
 File: nine_plots.jpg Graphic file (type jpg)
  <use nine_plots.jpg>
-Package pdftex.def Info: nine_plots.jpg used on input line 176.
+Package pdftex.def Info: nine_plots.jpg used on input line 202.
 (pdftex.def)             Requested size: 386.67296pt x 382.08012pt.
- [4]
-[5 <./topper.png> <./bottom.png> <./us.png>] [6 <./bifurcation.jpg>] [7 <./two_
-spots.jpg>] [8 <./nine_plots.jpg>] (./comp_meth_paper.aux)
+ [6 <./bifurcation.jpg>] [7 <./two_spots.jpg> <./Lyapunov_2_30.jpg> <./Lyapunov
+_31_100.jpg>] [8 <./nine_plots.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[]\OT1/cmr/m/n/10 Swinging At-wood's ma-chine. (2014, June 15). In Wikipedia, T
+he
+ []
 
-LaTeX Warning: There were undefined references.
 
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+\OT1/cmr/m/n/10 Free En-cy-clo-pe-dia. Re-trieved 05:43, De-cem-ber 2, 2015, fr
+om
+ []
 
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[9] (./comp_meth_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 2758 strings out of 493089
- 38345 string characters out of 6134842
- 116099 words of memory out of 5000000
- 6192 multiletter control sequences out of 15000+600000
- 9916 words of font info for 37 fonts, out of 8000000 for 9000
+ 2775 strings out of 493089
+ 38642 string characters out of 6134842
+ 116085 words of memory out of 5000000
+ 6206 multiletter control sequences out of 15000+600000
+ 10122 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,12n,32p,607b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb>
-Output written on comp_meth_paper.pdf (8 pages, 12369079 bytes).
+ 38i,12n,32p,645b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/e
+uler/eusm10.pfb>
+Output written on comp_meth_paper.pdf (9 pages, 15120595 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
